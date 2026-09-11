@@ -13,6 +13,7 @@ Console.WriteLine("");
 bool on = true;
 while(on)
 {
+    Console.Clear();
     int tPris = 0;
     for (int i = 0; i < vara.Count; i++)
     {
@@ -36,12 +37,14 @@ while(on)
         if(o > 0 && (vara.Count >= o))
         {
             Console.WriteLine($"Tog bort {vara.ElementAt(o - 1)} med priset {pris.ElementAt(o - 1)}");
+            Thread.Sleep(1000);
             vara.RemoveAt(o - 1);
             pris.RemoveAt(o - 1);
         }
         else
         {
             Console.WriteLine($"Skriv ett nummer mellan 1 - {vara.Count}");
+            Thread.Sleep(1000);
         }
     }
     else
